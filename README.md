@@ -9,7 +9,10 @@ This project is based on a C++ template. For build instructions and full templat
 
 ## Features
 
+### Project Features
 - **Caesar Cipher** – encode and decode messages with a customizable character shift.
+
+### From Template
 - **Logger** – logs to console and file (`logs/application.log`) with levels: INFO, WARNING, ERROR, DEBUG.
 - **SystemInfoProvider** – retrieves CPU thread count and operating system name.
  
