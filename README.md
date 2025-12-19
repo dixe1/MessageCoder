@@ -1,57 +1,39 @@
-# ProjectTemplate
-A C++17 project template with a Logger module and SystemInfoProvider for quickly starting new projects.
+# Message Coder
 
-## Note on Module Dependencies
-- `SystemInfoProvider.hpp/cpp` require `Logger.hpp/cpp`.
+Message Coder is a simple C++17 project for encoding and decoding messages.
 
-## Build
+## Notes
 
-### For Visual Studio 2026:
-```bash
-cmake -G "Visual Studio 18 2026" -A x64 . -B build
-```
+This project is based on a C++ template. For build instructions and full template documentation, see the [Template README](LINK_TO_TEMPLATE_README_HERE).
 
-### For Visual Studio 2022:
-```bash
-cmake -G "Visual Studio 17 2022" -A x64 . -B build
-```
 
-### For Visual Studio 2019:
-```bash
-cmake -G "Visual Studio 16 2019" -A x64 . -B build
-```
+## Features
 
-### For Linux / macOS (Unix Makefiles):
-```bash
-cmake -G "Unix Makefiles" -B build
-cmake --build build
-```
-
-## Example usage
-
-### Logger
+- **Caesar Cipher** – encode and decode messages with a customizable character shift.
+- **Logger** – logs to console and file (`logs/application.log`) with levels: INFO, WARNING, ERROR, DEBUG.
+- **SystemInfoProvider** – retrieves CPU thread count and operating system name.
+ 
+## Usage Examples
+ ### General Format
 ```cpp
+Algorithm::action(message, additionalParameters);
+```
+
+### Encoding and Decoding Messages
+
+```cpp
+#include "Ciphers/Caesar.hpp"
 #include "Logger.hpp"
 
 int main()
 {
-  Logger::consoleLoggingEnabled = true;
+    Logger::consoleLoggingEnabled = true;
 
-  Logger::INFO("This is a info");
-  Logger::WARNING("This is a warning");
-  Logger::ERROR("This is an error");
-  Logger::DEBUG("This is a debug");
+    std::string message = "Hello World";
+    std::string encoded = Caesar::encode(message, 16);
+    std::string decoded = Caesar::decode(encoded, 16);
+
+    Logger::DEBUG("Encoded: " + encoded);
+    Logger::DEBUG("Decoded: " + decoded);
 }
 ```
-
-### SystemInfoProvider
-```cpp
-#include "SystemInfoProvider.hpp"
-#include <iostream>
-
-int main()
-{
-  SystemInfo info = SystemInfoProvider::get();
-  std::cout << "CPU threads detected: " << info.threads << "\n";
-  std::cout << "Operating System: " << SystemInfoProvider::getOSNameString(info.osName) << "\n";
-}
