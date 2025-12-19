@@ -2,10 +2,9 @@
 
 Encryption Demo is a simple C++17 project for encoding and decoding messages.
 
-## Notes
+## Build
 
-This project is based on a C++ template. For build instructions and full template documentation, see the [Template README](https://github.com/dixe1/cpp-project-template/blob/main/README.md).
-
+Detailed build instructions and full documentation for the template can be found in the [Template README](https://github.com/dixe1/cpp-project-template/blob/main/README.md).
 
 ## Features
 
