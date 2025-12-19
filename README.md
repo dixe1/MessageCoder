@@ -1,6 +1,6 @@
-# Message Coder
+# Encryption Demo
 
-Message Coder is a simple C++17 project for encoding and decoding messages.
+Encryption Demo is a simple C++17 project for encoding and decoding messages.
 
 ## Notes
 
