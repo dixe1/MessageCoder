@@ -4,7 +4,7 @@ Message Coder is a simple C++17 project for encoding and decoding messages.
 
 ## Notes
 
-This project is based on a C++ template. For build instructions and full template documentation, see the [Template README](LINK_TO_TEMPLATE_README_HERE).
+This project is based on a C++ template. For build instructions and full template documentation, see the [Template README](https://github.com/dixe1/cpp-project-template/blob/main/README.md).
 
 
 ## Features
